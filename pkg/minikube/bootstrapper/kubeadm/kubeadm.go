@@ -430,6 +430,7 @@ func maybeDownloadAndCache(binary, version string) (string, error) {
 	options.ChecksumHash = crypto.SHA1
 
 	fmt.Printf("Downloading %s %s\n", binary, version)
+	fmt.Println("Begin download url: ", url)
 	if err := download.ToFile(url, targetFilepath, options); err != nil {
 		return "", errors.Wrapf(err, "Error downloading %s %s", binary, version)
 	}

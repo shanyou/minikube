@@ -169,7 +169,9 @@ const (
 )
 
 func GetKubernetesReleaseURL(binaryName, version string) string {
-	return fmt.Sprintf("https://storage.googleapis.com/kubernetes-release/release/%s/bin/linux/amd64/%s", version, binaryName)
+	//https://repo.htres.cn/kube/v1.10.0/bin/linux/amd64/kubectl
+	//https://storage.googleapis.com/kubernetes-release/release/%s/bin/linux/amd64/%s
+	return fmt.Sprintf("https://repo.htres.cn/kube/%s/bin/linux/amd64/%s", version, binaryName)
 }
 
 func GetKubernetesReleaseURLSha1(binaryName, version string) string {
